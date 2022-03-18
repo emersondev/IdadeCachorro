@@ -8,10 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var fieldAge: UITextField!
+    
+    @IBAction func buttonAge(_ sender: Any) {
+        
+        let age = Int(fieldAge.text!)! * 7
+        resultLabel.text = "A idade do cachorro é: \(String(age))"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
